@@ -1,0 +1,273 @@
+# 🎬 YouTube Clone
+
+A front-end YouTube-style webpage built using **HTML and CSS**.  
+This project recreates the basic layout of YouTube, including the header, search bar, sidebar navigation, video thumbnails, channel information, and responsive video grid.
+
+## 📌 Project Purpose
+
+The purpose of this project is to practice and demonstrate fundamental **HTML and CSS** skills by recreating a familiar video-sharing website interface.
+
+## 🚀 Features
+
+- YouTube-style header
+- Hamburger menu and YouTube logo
+- Search bar
+- Voice search button
+- Create/upload button
+- YouTube apps icon
+- Notification icon with notification count
+- User profile image
+- Sidebar navigation
+- Video thumbnail grid
+- Video duration labels
+- Channel profile pictures
+- Video titles
+- Channel names
+- Video views and upload dates
+- CSS tooltips
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- CSS Grid
+- CSS Flexbox
+- Google Fonts
+- SVG icons
+- WebP/AVIF images
+
+## 📂 Project Structure
+
+```text
+youtube-clone/
+│
+├── index.html
+│
+├── styles/
+│   ├── video.css
+│   ├── header.css
+│   ├── general.css
+│   └── sidebar.css
+│
+├── icon/
+│   ├── hamburger-menu.svg
+│   ├── youtube-logo.svg
+│   ├── search.svg
+│   ├── voice-search-icon.svg
+│   ├── upload.svg
+│   ├── youtube-apps.svg
+│   └── notifications.svg
+│
+├── sidebar/
+│   ├── home.svg
+│   ├── explore.svg
+│   ├── subscriptions.svg
+│   ├── originals.svg
+│   ├── youtube-music.svg
+│   └── library.svg
+│
+├── thumbnail/
+│   ├── thumbnail-2.webp
+│   ├── thumbnail-3.webp
+│   ├── thumbnail-4.webp
+│   ├── thumbnail-5.webp
+│   └── thumbnail-6.webp
+│
+└── channel-profile/
+    ├── channel-1.jpeg
+    ├── channel-2.jpeg
+    ├── channel-3.jpeg
+    ├── channel-4.jpeg
+    ├── channel-5.jpeg
+    └── channel-6.jpeg
+
+
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> youtube clone</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" href = "styles/vedio.css">
+        <link rel ="stylesheet" href = "styles/header.css">
+        <link rel ="stylesheet" href = "styles/general.css">
+         <link rel ="stylesheet" href = "styles/sidebar.css">
+    </head>
+    <body>
+            <header class = "header"> 
+                <div class = "left-section">
+                    <img class = "menu-icon" src = "icon/hamburger-menu.svg">
+                    <img class = "youtube-logo" src = "icon/youtube-logo.svg">
+                </div>
+                <div class = "middle-section">
+                    <input class = "searchbox" type ="text" placeholder = "search">
+                    <button class = "search-button"> 
+                        <img class = "search-icon" src = "icon/search.svg">
+                        <div class="tool-tip">search</div>
+                    </button>
+                    <button class = "mic-button"> 
+                        <img class = "mic-icon" src = "icon/voice-search-icon.svg">
+                        <div class="tool-tip">search with voice</div>
+                </div>  
+                <div class = "right-section">
+                    <div class = "upload-icon">
+                        <img class = "create-icon" src = "icon/upload.svg">
+                        <div class="tool-tip">create</div>
+                    </div>
+                    <div class ="apps">
+                        <img class = "apps-icon" src = "icon/youtube-apps.svg">
+                        <div class="tool-tip">Youtubeapps</div>
+
+                    </div>
+                    
+                    <div class = "notification-bell">
+                    <img class = "notification-icon" src = "icon/notifications.svg">
+                    <div class="tool-tip">notifications</div>
+                    <div class = "notification-count">9+</div>
+                    </div>
+                    <img class = "profile-icon" src = "chaneel profile picture/my-channel.jpeg">
+                </div>      
+            </header>
+            <nav class = "sidebar">
+                <div class = "sidebar-item">
+                     <img class = "home-icon" src = "sidebar/home.svg">
+                     <div>home</div>
+                </div>
+                <div class = "sidebar-item">
+                    <img class = "home-icon" src = "sidebar/explore.svg">
+                    <div>explore</div>
+                </div>   
+                <div class = "sidebar-item">
+                    <img class = "home-icon" src = "sidebar/subscriptions.svg">
+                    <div>subscription</div>
+                </div>         
+                <div class = "sidebar-item">
+                    <img class = "home-icon" src = "sidebar/originals.svg">
+                    <div>originals</div>
+                </div>       
+                <div class = "sidebar-item">
+                    <img class = "home-icon" src = "sidebar/youtube-music.svg">
+                    <div>youtubemusic</div> 
+                </div>         
+                <div class = "sidebar-item">
+                    <img class = "home-icon" src = "sidebar/library.svg">
+                    <div>library</div>
+                </div> 
+
+            </nav>
+
+     <main>
+            <section class="vedio-grid ">   
+             <div class = "vedio-preview">
+                <div class="thumbnail-row"> 
+                    <img class = "thumbnail1" src = "hq720.avif"> 
+                    <div class = "duration"> 10:34 </div> 
+                </div>
+                
+                <div class = "vedio-info-grid"> 
+                    <div class = "profile-picture">   
+                        <img class = "arthur-picture" src = "chaneel profile picture/channel-1.jpeg">
+                    </div>
+                    <div class = "vedio-info">
+                         <p class = "vedio-title">talking tech and ai with google ceo
+                            sundar pichai</p>
+                         <p class = "creator">marques brownlee</p>
+                        <p class = "count">3.4M views .6 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "vedio-preview">
+                <div class="thumbnail-row">
+                    <img class = "thumbnail2" src ="thumbnail/thumbnail-2.webp" >
+                    <div class = "duration"> 12:34 </div> 
+                </div>
+                <div class = "vedio-info-grid"> 
+                    <div class="profile-picture">   
+                         <img class = "arthur-picture" src = "chaneel profile picture/channel-2.jpeg">
+                    </div>
+                    <div class = "vedio-info"> 
+                        <p class = "vedio-title">Try NOT TO LAUGH CHALLENGE#9</p>
+                        <p class = "creator">markpiler</p>
+                        <p class = "count">19m views 4years ago</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+             <div class = "vedio-preview">
+                <div class="thumbnail-row"> 
+                    <img class = "thumbnail1" src = "thumbnail/thumbnail-3.webp"> 
+                    <div class = "duration"> 11:34 </div>  
+                </div>
+                
+                <div class = "vedio-info-grid"> 
+                    <div class = "profile-picture">   
+                        <img class = "arthur-picture" src = "chaneel profile picture/channel-3.jpeg">
+                    </div>
+                    <div class = "vedio-info">
+                         <p class = "vedio-title">Crazy tik toks taken moments before sisaster</p>
+                         <p class = "creator">sssniperwolf</p>
+                        <p class = "count">12M views .1year ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "vedio-preview">
+                <div class="thumbnail-row">
+                    <img class = "thumbnail2" src = "thumbnail/thumbnail-4.webp">
+                    <div class = "duration"> 13:34 </div> 
+                </div>
+                <div class = "vedio-info-grid"> 
+                    <div class="profile-picture">   
+                         <img class = "arthur-picture" src = "chaneel profile picture/channel-4.jpeg">
+                    </div>
+                    <div class = "vedio-info"> 
+                        <p class = "vedio-title">simple math problem that no one can solve</p>
+                        <p class = "creator">veritasium</p>
+                        <p class = "count">125k views 4years ago</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+             <div class = "vedio-preview">
+                <div class="thumbnail-row"> 
+                    <img class = "thumbnail1" src = "thumbnail/thumbnail-5.webp"> 
+                    <div class = "duration"> 10:34 </div>  
+                </div>
+                
+                <div class = "vedio-info-grid"> 
+                    <div class = "profile-picture">   
+                        <img class = "arthur-picture" src = "chaneel profile picture/channel-5.jpeg">
+                    </div>
+                    <div class = "vedio-info">
+                    <p class = "vedio-title">kadine algoritham</p>
+                         <p class = "creator">cs dojo</p>
+                        <p class = "count">141.4k views .1 year ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "vedio-preview">
+                <div class="thumbnail-row">
+                    <img class = "thumbnail2" src = "thumbnail/thumbnail-6.webp">
+                    <div class = "duration"> 14:34 </div> 
+                </div>
+                <div class = "vedio-info-grid"> 
+                    <div class="profile-picture">   
+                         <img class = "arthur-picture" src = "chaneel profile picture/channel-6.jpeg">
+                    </div>
+                    <div class = "vedio-info"> 
+                        <p class = "vedio-title">anything you can fit in the circle i will pay for</p>
+                        <p class = "creator">Rmr beast</p>
+                        <p class = "count">12mviews 1years ago</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+         </section>
+     </main>       
+    </body> 
+</html>
